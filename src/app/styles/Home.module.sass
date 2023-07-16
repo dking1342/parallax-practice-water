@@ -1,0 +1,120 @@
+@import './_variables.sass'
+
+.main
+  width: 100vw
+  height: 100%
+
+  .section
+    min-height: 100vh
+    position: relative
+    overflow: hidden
+
+  .section1
+    position: relative
+    width: 100vw
+    height: 100vh
+    transform-style: preserve-3d
+    perspective: 100px
+    overflow: hidden
+    background-image: url("https://images.pexels.com/photos/3970396/pexels-photo-3970396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    background-size: cover
+    background-position: center
+
+    .heroContainer
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 1.5rem
+      z-index: 10
+
+      h1
+        width: 95%
+        margin: 0 auto
+        text-align: center
+        font-size: clamp(4rem, 15vw,10rem)
+        font-weight: 900
+        text-transform: uppercase
+        background-image: url("https://images.unsplash.com/photo-1618576980905-8b704806a39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80")
+        background-repeat: repeat
+        background-size: cover
+        background-position: bottom
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.75))
+        z-index: -1
+
+      p
+        color: #fff
+        font-size: clamp(0.8rem, 5vw,2rem)
+        font-weight: 300
+        text-transform: capitalize
+        max-width: 750px
+        width: 95%
+        margin: 0 auto
+        text-align: center
+        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.75))
+
+      .heroLink
+        padding: 1.5rem 3.5rem
+        outline: none
+        border: none
+        border-radius: 35px
+        -webkit-appearance: button
+        font-weight: 500
+        font-size: 24px
+        text-transform: capitalize
+        background-image: url("https://images.unsplash.com/photo-1618576980905-8b704806a39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80")
+        background-size: fill
+        background-position: bottom
+        background-repeat: no-repeat
+        filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.5))
+        transition: 1s ease all
+        z-index: 10
+
+        &:hover
+          transform: scale(1.1)
+
+    .sun
+      width: 300px
+      height: 300px
+      border-radius: 50%
+      position: absolute
+      bottom: 2vh
+      right: 15vw
+      z-index: -6
+      filter: blur(7px) drop-shadow(2px 2px 5px rgba(0,0,0, 0.3))
+      background: linear-gradient(180deg, #ffe58a 0%, #ffce61 25%, #ee6c45 50%, #bf3475 75%, #1f214d 100%)
+
+  .section2
+    height: 150vh
+    background: linear-gradient(180deg, #4479e1, #071eed)
+
+    .bgLayer
+      width: 100%
+      height: 100%
+      position: absolute
+      bottom: 0
+
+    .bgLayer1
+      clip-path: polygon(0% 100%, 0% 41%, 7% 35%, 13% 32%, 20% 34%, 25% 40%, 30% 46%, 36% 49%, 43% 50%, 50% 48%, 56% 46%, 62% 42%, 68% 37%, 72% 32%, 78% 28%, 85% 24%, 87% 23%, 90% 23%, 97% 28%, 100% 33%, 100% 100%)
+      background: linear-gradient(0deg,$water4, #000)
+      z-index: 1
+
+    .bgLayer2
+      clip-path: polygon(0% 100%, 10% 91%, 18% 86%, 26% 85%, 36% 86%, 44% 86%, 53% 83%, 60% 80%, 66% 74%, 72% 70%, 78% 65%, 84% 60%, 90% 56%, 96% 52%, 100% 56%, 100% 100%)
+      background: linear-gradient(0deg, $water3 0%, $water4 20%)
+      z-index: 2
+
+    .bgLayer3
+      clip-path: polygon(0% 100%, 0% 62%, 7% 66%, 12% 70%, 18% 71%, 25% 71%, 31% 68%, 38% 65%, 45% 65%, 49% 69%, 53% 74%, 58% 79%, 65% 82%, 71% 83%, 78% 82%, 83% 78%, 88% 73%, 94% 69%, 100% 71%, 100% 76%, 100% 100%)
+      background: linear-gradient(0deg, $water2 0%,$water3 20%)
+      z-index: 3
+
+  .section3
+    height: 200vh
+    background: linear-gradient(180deg, $water2 0%, $water3 60%, $water4 100%)
